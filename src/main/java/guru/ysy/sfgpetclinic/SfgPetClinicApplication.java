@@ -1,7 +1,7 @@
 package guru.ysy.sfgpetclinic;
 
 import guru.ysy.sfgpetclinic.controllers.ConstructorInjectedController;
-import guru.ysy.sfgpetclinic.controllers.MyController;
+import guru.ysy.sfgpetclinic.controllers.MainController;
 import guru.ysy.sfgpetclinic.controllers.PropertyInjectedController;
 import guru.ysy.sfgpetclinic.controllers.SetterInjectedController;
 import org.springframework.boot.SpringApplication;
@@ -13,13 +13,11 @@ public class SfgPetClinicApplication {
 
     public static void main(String[] args) {
 
-       ApplicationContext ctx =  SpringApplication.run(SfgPetClinicApplication.class, args);
+        ApplicationContext ctx =  SpringApplication.run(SfgPetClinicApplication.class, args);
 
-        MyController myController = (MyController) ctx.getBean("myController");
-
-        String greeting = myController.sayHello();
-
-        System.out.println(greeting);
+        MainController mainController = (MainController) ctx.getBean("mainController");
+        System.out.println("-------- Primary Bean");
+        System.out.println(mainController.sayHello());
 
         System.out.println("-------- Property");
         PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
