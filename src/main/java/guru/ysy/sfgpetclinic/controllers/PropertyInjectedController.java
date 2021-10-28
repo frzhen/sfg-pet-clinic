@@ -1,15 +1,20 @@
 package guru.ysy.sfgpetclinic.controllers;
 
 import guru.ysy.sfgpetclinic.services.GreetingService;
+import guru.ysy.sfgpetclinic.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+
+import java.awt.*;
 
 /**
  * Created by zhenrui on 2021/10/28 11:58
  */
 @Controller
-public class PropertyInjectionController {
+public class PropertyInjectedController {
 
+    @Qualifier("propertyInjectedGreetingService")
     @Autowired
     public GreetingService greetingService;
 

@@ -1,10 +1,8 @@
 package guru.ysy.sfgpetclinic.controllers;
 
-import guru.ysy.sfgpetclinic.services.GreetingServiceImpl;
+import guru.ysy.sfgpetclinic.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Created by zhenrui on 2021/10/28 13:07
@@ -18,7 +16,7 @@ class ConstructorInjectedControllerTest {
 
     @BeforeEach
     void setUp() {
-        controller = new ConstructorInjectedController(new GreetingServiceImpl());
+        controller = new ConstructorInjectedController(new ConstructorGreetingService());
     }
 
     @Test
