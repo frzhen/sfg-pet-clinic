@@ -1,23 +1,21 @@
 package guru.ysy.sfgpetclinic.model;
 
-import org.aspectj.weaver.patterns.PerTypeWithin;
-
 import java.time.LocalDate;
 
 /**
  * Created by zhenrui on 2021/11/1 21:40
  */
 public class Pet {
-    private PerType perType;
+    private PetType petType;
     private Owner owner;
     private LocalDate birthDate;
 
-    public PerType getPerType() {
-        return perType;
+    public PetType getPerType() {
+        return petType;
     }
 
-    public void setPerType(PerType perType) {
-        this.perType = perType;
+    public void setPerType(PetType petType) {
+        this.petType = petType;
     }
 
     public Owner getOwner() {

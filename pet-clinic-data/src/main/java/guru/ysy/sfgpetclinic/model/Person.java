@@ -1,7 +1,7 @@
 package guru.ysy.sfgpetclinic.model;
 
 /**
- * Created by zhenrui on 2021/11/1 21:38
+ * Created by zhenrui on 2021/11/1 23:15
  */
 public class Person {
     private String firstName;
