@@ -129,6 +129,6 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:frzhen/sfg-pet-clinic.git</developerConnection>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
 </project>
