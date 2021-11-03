@@ -16,7 +16,7 @@
 
     <groupId>guru.ysy</groupId>
     <artifactId>sfg-pet-clinic</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>sfg-pet-clinic</name>
     <description>sfg-pet-clinic</description>
 
@@ -128,6 +128,6 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:frzhen/sfg-pet-clinic.git</developerConnection>
-      <tag>sfg-pet-clinic-1.0.0</tag>
+      <tag>HEAD</tag>
   </scm>
 </project>
