@@ -3,7 +3,7 @@ package guru.ysy.sfgpetclinic.model;
 /**
  * Created by zhenrui on 2021/11/1 21:41
  */
-public class PetType {
+public class PetType extends BaseEntity{
     private String name;
 
     public String getName() {
