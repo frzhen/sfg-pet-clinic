@@ -1,14 +1,20 @@
 package guru.ysy.sfgpetclinic.services.map;
 
 import guru.ysy.sfgpetclinic.model.Owner;
-import guru.ysy.sfgpetclinic.services.CrudService;
+import guru.ysy.sfgpetclinic.services.OwnerService;
 
 import java.util.Set;
 
 /**
  * Created by zhenrui on 2021/11/7 15:45
  */
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
+    }
+
     @Override
     public Set<Owner> findAll() {
         return super.findAll();

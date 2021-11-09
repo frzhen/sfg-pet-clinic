@@ -1,14 +1,15 @@
 package guru.ysy.sfgpetclinic.services.map;
 
 import guru.ysy.sfgpetclinic.model.Vet;
-import guru.ysy.sfgpetclinic.services.CrudService;
+import guru.ysy.sfgpetclinic.services.VetService;
 
 import java.util.Set;
 
 /**
  * Created by zhenrui on 2021/11/7 15:56
  */
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
+
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
