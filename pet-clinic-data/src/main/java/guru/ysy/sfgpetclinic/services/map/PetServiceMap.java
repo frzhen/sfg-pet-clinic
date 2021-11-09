@@ -3,12 +3,14 @@ package guru.ysy.sfgpetclinic.services.map;
 import guru.ysy.sfgpetclinic.model.Owner;
 import guru.ysy.sfgpetclinic.model.Pet;
 import guru.ysy.sfgpetclinic.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 /**
  * Created by zhenrui on 2021/11/7 15:53
  */
+@Service
 public class PetServiceMap extends AbstractMapService<Pet,Long> implements PetService {
     @Override
     public Owner findByLastName(String lastName) {
