@@ -10,11 +10,11 @@ public class Pet extends BaseEntity{
     private Owner owner;
     private LocalDate birthDate;
 
-    public PetType getPerType() {
+    public PetType getPetType() {
         return petType;
     }
 
-    public void setPerType(PetType petType) {
+    public void setPetType(PetType petType) {
         this.petType = petType;
     }
 
