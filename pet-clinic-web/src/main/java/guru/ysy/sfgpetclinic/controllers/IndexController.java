@@ -14,4 +14,9 @@ public class IndexController {
 
         return "index";
     }
+
+    @RequestMapping("/oops")
+    public String oopsPage(){
+        return "notimplemented";
+    }
 }
