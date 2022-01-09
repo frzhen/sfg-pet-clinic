@@ -8,4 +8,6 @@ import org.springframework.data.repository.CrudRepository;
  */
 public interface PetRepository extends CrudRepository<Pet, Long> {
 
+    //TODO: create find by owner last name, first name, and by full name
+
 }

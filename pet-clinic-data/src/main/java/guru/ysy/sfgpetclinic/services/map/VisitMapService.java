@@ -2,12 +2,14 @@ package guru.ysy.sfgpetclinic.services.map;
 
 import guru.ysy.sfgpetclinic.model.Visit;
 import guru.ysy.sfgpetclinic.services.VisitService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 /**
  * Created by zhenrui on 2022/1/9 11:43
  */
+@Service
 public class VisitMapService  extends AbstractMapService<Visit, Long> implements VisitService {
 
 
@@ -27,8 +29,9 @@ public class VisitMapService  extends AbstractMapService<Visit, Long> implements
         if (object.getPet() == null || object.getPet().getOwner() == null ||
            object.getPet().getId() == null || object.getPet().getOwner().getId() == null) {
             throw new NullPointerException("Invalid Visit");
+        } else {
+            return super.save(object);
         }
-        return super.save(object);
     }
 
     @Override

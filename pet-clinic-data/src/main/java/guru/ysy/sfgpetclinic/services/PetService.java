@@ -7,5 +7,5 @@ import guru.ysy.sfgpetclinic.model.Pet;
  */
 public interface PetService extends CrudService<Pet, Long>{
 
-    Pet findByLastName(String lastName);
+    //TODO: create find by owner last name, first name, and by full name
 }

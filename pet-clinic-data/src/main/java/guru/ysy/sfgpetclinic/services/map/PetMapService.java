@@ -11,10 +11,6 @@ import java.util.Set;
  */
 @Service
 public class PetMapService extends AbstractMapService<Pet,Long> implements PetService {
-    @Override
-    public Pet findByLastName(String lastName) {
-        return null;
-    }
 
     @Override
     public Set<Pet> findAll() {
