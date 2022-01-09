@@ -12,11 +12,11 @@ import java.util.Set;
  * Created by zhenrui on 2021/11/7 15:56
  */
 @Service
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
+public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
 
     private final SpecialtyService specialtyService;
 
-    public VetServiceMap(SpecialtyService specialtyService) {
+    public VetMapService(SpecialtyService specialtyService) {
         this.specialtyService = specialtyService;
     }
 
@@ -32,7 +32,7 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
 
     @Override
     public Vet save(Vet object) {
-        if (object.getSpecialties().size() >0) {
+        if (object.getSpecialties().isEmpty()) {
             object.getSpecialties().forEach(specialty -> {
                 if (specialty.getId() == null) {
                     Specialty savedSpecialty = specialtyService.save(specialty);
