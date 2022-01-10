@@ -13,7 +13,7 @@ import java.util.Set;
  * Created by zhenrui on 2022/1/4 22:49
  */
 @Service
-@Profile("springdatajpa")
+@Profile("spring_data_jpa")
 public class SpecialtySDJpaService implements SpecialtyService {
 
     private final SpecialtyRepository specialtyRepository;
