@@ -1,0 +1,89 @@
+@startuml
+
+class BaseEntity {
+    -Long id
+    +Long getId()
+    +void setId()
+}
+
+BaseEntity <|-- Person
+
+class Person {
+    -String firstName
+    -String lastName
+    +String getFirstName()
+    +void setFirstName(String)
+    +String getLastName()
+    +void setLastName(String)
+}
+
+Person <|-- Owner
+
+class Owner {
+    -String address
+    -String city
+    -String telephone
+    -Set<Pet> pets
+    +String getAddress()
+    +void setAddress(String)
+    +String getCity()
+    +void setCity(String)
+    +String getTelephone()
+    +void setTelephone(String)
+    +Set<Pet> getPets()
+    +void setPets(Set<Pet>)
+}
+Owner "1" *-- "many" Pet : contains
+
+class Pet {
+    -String name
+    -PetType petType
+    -Owner owner
+    -LocalDate birthDate
+    -Set<Visit> visits
+    +String getName()
+    +void setName(String)
+    +PetType getPetType()
+    +void setPetType(PetType)
+    +Owner getOwner()
+    +void setOwner(Owner)
+    +LocalDate getBirthDate()
+    +void setBirthDate(LocalDate)
+    +Set<Visit> getVisits()
+    +void setVisits(Set<Visit>)
+}
+Pet "1" o-- "1" PetType
+
+class PetType {
+    -String name
+    +String getName()
+    +void setName(String)
+}
+
+class Vet {
+    -Set<Specialty> specialties
+    +Set<Specialty> getSpecialties()
+    +void setSpecialties(Set<Specialty>)
+}
+
+Vet "many" *-- "many" Specialty
+class Specialty {
+    -String description
+    +String getDescription()
+    +void setDescription(String)
+}
+
+class Visit {
+    -LocalDate date
+    -String description
+    -Pet pet
+    +LocalDate getDate()
+    +void setDate(LocalDate)
+    +String getDescription()
+    +void setDescription(String)
+    +Pet getPet()
+    +void setPet(Pet)
+}
+Vet "1" --> "many" Visit
+Pet "1" --> "many" Visit
+@enduml
