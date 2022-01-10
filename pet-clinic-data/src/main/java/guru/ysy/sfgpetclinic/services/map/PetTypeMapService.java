@@ -3,6 +3,7 @@ package guru.ysy.sfgpetclinic.services.map;
 
 import guru.ysy.sfgpetclinic.model.PetType;
 import guru.ysy.sfgpetclinic.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -11,6 +12,7 @@ import java.util.Set;
  * Created by zhenrui on 2021/11/15 11:57
  */
 @Service
+@Profile({"default", "map"})
 public class PetTypeMapService extends AbstractMapService<PetType, Long> implements PetTypeService {
 
     @Override
